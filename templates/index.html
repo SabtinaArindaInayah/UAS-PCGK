@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Deteksi Jalan Berlubang</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Deteksi Jalan Berlubang</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*" required>
+    <br><br>
+    <button type="submit">Proses Gambar</button>
+</form>
+
+{% if data %}
+<hr>
+
+<h2>Hasil Analisis</h2>
+<p><b>Kondisi Jalan:</b> {{ data.kondisi }}</p>
+<p><b>Kerusakan (%):</b> {{ data.kerusakan }}</p>
+<p><b>Total Lubang:</b> {{ data.total_lubang }}</p>
+
+<ul>
+    <li>Lubang Kecil: {{ data.lubang_kecil }}</li>
+    <li>Lubang Sedang: {{ data.lubang_sedang }}</li>
+    <li>Lubang Besar: {{ data.lubang_besar }}</li>
+</ul>
+
+<h3>Hasil Deteksi</h3>
+<img src="data:image/jpeg;base64,{{ data.result }}" width="600">
+
+<h3>Proses Citra</h3>
+<div class="grid">
+    <div>
+        <p>ROI</p>
+        <img src="data:image/jpeg;base64,{{ data.roi }}">
+    </div>
+    <div>
+        <p>Grayscale + CLAHE</p>
+        <img src="data:image/jpeg;base64,{{ data.gray }}">
+    </div>
+    <div>
+        <p>Threshold</p>
+        <img src="data:image/jpeg;base64,{{ data.thresh }}">
+    </div>
+    <div>
+        <p>Morfologi</p>
+        <img src="data:image/jpeg;base64,{{ data.morph }}">
+    </div>
+</div>
+
+{% endif %}
+
+</body>
+</html>
