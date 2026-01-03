@@ -64,7 +64,6 @@ def process_analysis(model, input_file, conf_threshold, use_clahe, aspect_ratio_
     crop_list = []
     raw_data = []
     debug_list = [] 
-    
     filtered_boxes = []
     total_area_lubang = 0
     
