@@ -78,7 +78,7 @@ Proyek ini dikerjakan oleh 12 anggota dengan pembagian tugas spesifik pada modul
 1. Andre Saputra
 2. Khairunnisa Labibah
 3. Sabtina Arinda Inayah
-4. Adzka Dzikri imanullah
+4. Adzka Dzikri Imanullah
 5. M. Farid Febriansyah
 6. Primanda Suryawan
 7. Andhika Pratama
