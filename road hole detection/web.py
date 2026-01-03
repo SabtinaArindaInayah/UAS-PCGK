@@ -161,7 +161,8 @@ with st.sidebar:
     ratio = st.slider("Filter Jarak (Rasio)", 5.0, 20.0, 12.0)
     clahe = st.checkbox("Mode Penajam (CLAHE)")
 
-    # --- BAGIAN TIM PENGEMBANG (SESUAI REQUEST FIX) ---
+
+    
     st.markdown("---")
     with st.expander("ANGGOTA KELOMPOK 3"):
         st.markdown("""
