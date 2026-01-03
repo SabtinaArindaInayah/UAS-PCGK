@@ -126,7 +126,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ==========================================
-# 3. LOAD MODEL
+# 3.LOAD MODEL
 # ==========================================
 model, status_msg = logic.load_model()
 
